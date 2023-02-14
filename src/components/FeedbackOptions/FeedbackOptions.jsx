@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
