@@ -11,14 +11,14 @@ export class Feedback extends Component {
     bad: 0,
   };
 
-  increaseStatCount = e => {
+  increaseStatCount = option => {
     this.setState(state => {
-      return { [e.target.name]: state[e.target.name] + 1 };
+      return { [option]: state[option] + 1 };
     });
   };
 
   countTotalFeedback = () => {
-    return Object.values(this.state).reduce((acc, item) => (acc += item));
+    return this.state.good + this.state.neutral + this.state.bad;
   };
 
   countPositiveFeedbackPercentage = () => {
